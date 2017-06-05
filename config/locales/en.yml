@@ -1,0 +1,5 @@
+en:
+  google_maps:
+    error:
+      request: An error occurred during the request
+      no_info: Nothing found on request
