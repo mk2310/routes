@@ -1,24 +1,16 @@
-# README
+# Routes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Сервис для расчета дальности и времени поездки.
+На вход принимает пары параметров широты и долготы, конечных точек маршрута.
+API:
+```
+/api/v1/routes/new
+```
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Параметры:
+```
+begin_lat: String
+begin_long: String
+end_lat: String
+end_long: String
+```

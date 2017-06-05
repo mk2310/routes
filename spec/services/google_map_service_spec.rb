@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'spec_helper'
 
 RSpec.describe GoogleMapService do
   let(:params) do
@@ -28,10 +28,10 @@ RSpec.describe GoogleMapService do
           "legs": [
             {
               "distance": {
-                "text": "7,9 мил."
+                "text": "7,9"
               },
               "duration": {
-                "text": "26 мин."
+                "text": "26"
               }
             }
           ]
@@ -40,10 +40,10 @@ RSpec.describe GoogleMapService do
           "legs": [
             {
               "distance": {
-                "text": "16,7 мил."
+                "text": "16,7"
               },
               "duration": {
-                "text": "29 мин."
+                "text": "29"
               }
             }
           ]
@@ -56,12 +56,12 @@ RSpec.describe GoogleMapService do
   let(:extracted_data) do
     [
       {
-        distance: "7,9 мил.",
-        time: "26 мин."
+        distance: "7,9",
+        time: "26"
       },
       {
-        distance: "16,7 мил.",
-        time: "29 мин."
+        distance: "16,7",
+        time: "29"
       }
     ]
   end
@@ -73,24 +73,10 @@ RSpec.describe GoogleMapService do
     end
   end
 
-  # describe '#get_data' do
-  #   it 'should return response from' do
-  #     # described_class.new(params)
-  #   end
-  # end
-
   describe '#extract_data' do
     it 'should distance and time' do
       data = described_class.new(params).extract_data(response_data)
       expect(data).to eql(extracted_data)
     end
-  end
-
-  describe '#perform' do
-  end
-
-  describe '#' do
-  end
-  describe '#' do
   end
 end
